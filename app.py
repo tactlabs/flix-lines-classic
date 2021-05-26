@@ -10,7 +10,7 @@ value = Markup('First line.<br>Second line.<br>')
 cluster = MongoClient('mongodb+srv://praveena:praveena@cluster0.vhted.mongodb.net/registration?retryWrites=true&w=majority')
 
 db = cluster["praveena"]
-col = db["registration"]
+dbenter= db["registration"]
 
 app  = Flask(__name__)
 PORT = 3000
@@ -24,12 +24,12 @@ def startpy():
 
 @app.route("/submit", methods=["GET","POST"])
 def submit():
-    name = request.form.get("feature")
-    line  = request.form.get("line")
+    name = request.form.get("feature-title")
+    line  = request.form.get("short_summary")
 
-    col.insert_one({ "Name": name , "line": line })
-    for x in col.find():
-        
+    dbenter.insert_one({ "Name": name , "line": line })
+    for x in dbenter.find({}):
+        print(x)
        
 
         val=x['Name']
@@ -40,14 +40,14 @@ def submit():
     }  
     # {{ org.backgroundInfo | replace(‘\n’, ‘<br>’) }} 
 
-    # return json.dumps(result) 
+    
     return render_template('result.html', result = result)
     
 
 @app.route("/file", methods=["GET"])
 def file():
     response=[]
-    for main in col.find():
+    for main in dbenter.find():
         value = main['Name']
         value2 = main['line']
         
@@ -59,18 +59,20 @@ def file():
         print(response)
 
         
-    # return json.dumps(response) 
+
+
+    # main
     return render_template('main.html', main = response)
 
 @app.route("/find/<username>", methods=["GET"])
 def find(username):
     db = cluster["praveena"]
-    col = db["registration"]
+    dbenter = db["registration"]
    
     mydata=[]
     myquery = { "Name": username }
 
-    for mydoc in col.find(myquery):
+    for mydoc in dbenter.find(myquery):
         mydata.append(mydoc)
 
 
