@@ -38,7 +38,7 @@ def submit():
         'Name' : val ,
         'line' : val2
     }  
-    # {{ org.backgroundInfo | replace(‘\n’, ‘<br>’) }} 
+    
 
     
     return render_template('result.html', result = result)
@@ -79,17 +79,7 @@ def find(username):
     print(mydata)
     return render_template('find.html', data=mydata)
 
-    # name =  mydoc['name']
-    # desc,
-
-    # for x in mydoc:
-    #   print(x)
-
-
-    # data={
-    #     'name' : mydoc['name'],
-    #     'description' : mydoc['description']
-    # }
+    
 
     
   
