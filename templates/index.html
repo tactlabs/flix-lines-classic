@@ -6,18 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>featurepreneur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='animate.css') }}">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    
+
 
     <style>
         .margin-top {
@@ -62,31 +68,32 @@
                         <div class="page_heading">
                             <div style="background-color: #fff;">
                                 <div style="background-color: #fff;">
-                                    <img style="width: 60px; margin-left: 48%; background-color: #fff;" src="http://d1cb7w4cvia6lb.cloudfront.net/featurepreneur/recording/logo.png" alt="">
-                                
-                                
+                                    <img style="width: 60px; margin-left: 48%; background-color: #fff;"
+                                        src="http://d1cb7w4cvia6lb.cloudfront.net/featurepreneur/recording/logo.png"
+                                        alt="">
+
+
                                 </div>
-                            
-                           
-                            <h3> Flix-Lines  </h3>
+
+
+                                <p class="fs-1">Flix-Lines</p>
+                            </div>
                         </div>
-                    </div>
                         <section class="page_content">
                             <form action="/submit" method="POST" enctype="multipart/form-data">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="block-label sm-mb0"> Name </label>
                                         <input type="text" class="form-control boxes text-input input--full"
-                                            id="feature-title" name="feature-title" placeholder="write something here"
-                                            required />
+                                            id="feature-title" name="feature-title" placeholder="" required />
                                     </div>
                                 </div>
 
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="block-label sm-mb0"> Lines</label>
-                                        <textarea class="form-control" name="short_summary" rows="10"
-                                            placeholder="write something here"></textarea>
+                                        <textarea class="form-control" name="short_summary" rows="2"
+                                            placeholder=""></textarea>
                                     </div>
                                     <div>
                                         <button onclick="document.location='default.asp'">Submit</button>
