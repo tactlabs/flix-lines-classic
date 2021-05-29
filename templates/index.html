@@ -64,7 +64,7 @@
         <div class="row">
           <div class="col-sm-12 text-center">
             <div style="background-color: #fff;">
-                <img style="width: 80px; margin-center: %; background-color: #fff;"
+                <img style="width: 80px; "
                     src="http://d1cb7w4cvia6lb.cloudfront.net/featurepreneur/recording/logo.png" alt="">
 
 
@@ -86,13 +86,23 @@
                   <form action="/submit" method="POST" enctype="multipart/form-data">
                     <div id="err-msg"></div>
                     <div class="form-group">
-                      <input type="Name" class="form-control" placeholder="Name" id="Name" />
+                      <input type="Name" class="form-control" placeholder="Name" id="Name" 
+                     
+                      type="text"
+                      class="form-control boxes text-input input--full"
+                      id="feature-title"
+                      name="feature-title"
+                      placeholder="write something here" required/>
                     </div>
                     <div class="form-group">
-                      <input type="Line" class="form-control" placeholder="Line" id="Line" />
+                      <input type="Line" class="form-control" placeholder="Line" id="Line"
+                      <textarea class="form-control"
+                      name="short_summary"
+                      rows="10" 
+                      placeholder="write something here"></textarea> 
                     </div>
                     <button class=" btn-fpr-block btn-fpr-primary btn-fpr"onclick="document.location='default.asp'">submit</button>
-                 
+                 </form>
   
                 </div>
               </div>
