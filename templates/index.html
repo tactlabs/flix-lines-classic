@@ -39,79 +39,68 @@
             height: 100px;
             border: #f5f5f5 1px solid;
         }
+        .btn-fpr-primary {
+    background: #50bf9f;
+    border-color: #50bf9f;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+.btn-fpr {
+    border-radius: 40px;
+    padding: 15px 15px;
+    outline: none;
+    outline: 0;
+}
+.btn-fpr-block {
+    display: block;
+    width: 100%;
+}
     </style>
 
-    <nav class="navbar navbar-white navbar-white-inner navbar-fixed-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 pull-left">
-                    <a class="custom_head animated fadein" href="/">
-                    </a>
-                </div>
-                <div class="col-sm-8 pull-right">
-                    <nav class="navbar-login pull-right">
-                        <ul class="nav navbar-nav tr-hd-rg">
-                            <li class="dropdown"> </li>
-                        </ul>
-                    </nav>
-                </div>
+
+    <nav class="navbar navbar-white navbar-fixed-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div style="background-color: #fff;">
+                <img style="width: 80px; margin-center: %; background-color: #fff;"
+                    src="http://d1cb7w4cvia6lb.cloudfront.net/featurepreneur/recording/logo.png" alt="">
+
+
             </div>
+          </div>
         </div>
+      </div>
     </nav>
-
-
-    <section class="inner-pg-dash">
-        <div class="container">
+    <section class="inner-pg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
             <div class="row">
-                <div class="col-md-12">
-                    <section class="page_inner">
-                        <div class="page_heading">
-                            <div style="background-color: #fff;">
-                                <div style="background-color: #fff;">
-                                    <img style="width: 60px; margin-left: 48%; background-color: #fff;"
-                                        src="http://d1cb7w4cvia6lb.cloudfront.net/featurepreneur/recording/logo.png"
-                                        alt="">
-
-
-                                </div>
-
-
-                                <p class="fs-1">Flix-Lines</p>
-                            </div>
-                        </div>
-                        <section class="page_content">
-                            <form action="/submit" method="POST" enctype="multipart/form-data">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="block-label sm-mb0"> Name </label>
-                                        <input type="text" class="form-control boxes text-input input--full"
-                                            id="feature-title" name="feature-title" placeholder="" required />
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="block-label sm-mb0"> Lines</label>
-                                        <textarea class="form-control" name="short_summary" rows="2"
-                                            placeholder=""></textarea>
-                                    </div>
-                                    <div>
-                                        <button onclick="document.location='default.asp'">Submit</button>
-                                    </div>
-                                </div>
-
-
-                            </form>
-                        </section>
-                    </section>
+              <div class="col-md-12">
+                <div class="form-block-right login">
+                  <h2 class="text-center px-3 py-5">Flixlines</h2>
+  
+                
+                  <form action="/submit" method="POST" enctype="multipart/form-data">
+                    <div id="err-msg"></div>
+                    <div class="form-group">
+                      <input type="Name" class="form-control" placeholder="Name" id="Name" />
+                    </div>
+                    <div class="form-group">
+                      <input type="Line" class="form-control" placeholder="Line" id="Line" />
+                    </div>
+                    <button class=" btn-fpr-block btn-fpr-primary btn-fpr"onclick="document.location='default.asp'">submit</button>
+                 
+  
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-
-
-    <div class="margin-top"></div>
-
     <footer class="footer animated fadeIn">
         <div class="container">
             <div class="row">
@@ -131,6 +120,7 @@
             </div>
         </div>
     </footer>
+  
 
 </body>
 
