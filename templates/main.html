@@ -66,31 +66,43 @@
         </div>
     </nav>
 
+
     <section class="inner-pg-dash">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <section class="page_inner">
-
                         <div class="page_heading">
+
+
                             {% for i in main %}
-                            <div class="boxed">
+
+                            <table border="1">
                                 <tr>
-                                    <h2>Name</h2>
-                                    <td>{{i.Name}}</td>
-                                    <br>
-                                    <br>
-                                    <div class="box">
-                                        <h2>line</h2>
-                                        {% autoescape false %}
-                                        <td>{{i.line | replace("\n", "<br />")}}</td>
-                                        {% endautoescape %}
-                                    </div>
+                                    <th width="50%"> </th>
+                                    <th width="100%"> </th>
+                                    <th width="100%"> </th>
+                                <tr>
+                                    <td>
+                                     
+                                        <h5> {{i.Name}}</h5>
+                                    </td>
+                                    <td>
+                                        <h5> {{i.line}}</h5>
+                                    </td>
+
                                 </tr>
-                            </div>
+
+                                </tr>
+                            </table>
                             {%endfor%}
                         </div>
                     </section>
+    </section>
+    </div>
+    </div>
+    </div>
+    </section>
     </section>
     </div>
     </div>
