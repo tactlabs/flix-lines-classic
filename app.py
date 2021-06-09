@@ -28,18 +28,19 @@ def submit():
     line  = request.form.get("short_summary")
 
     dbenter.insert_one({ "Name": name , "line": line })
-    for x in dbenter.find({}):
-        print(x)
-       
 
-        val=x['Name']
-        val2=x['line'] 
+    for x in dbenter.find({}):
+        # print(x)
+        try: 
+            val=x['Name']
+            val2=x['line']
+        except:
+            print("name or line not found")
+
     result = {
         'Name' : val ,
         'line' : val2
     }  
-    
-
     
     return render_template('result.html', result = result)
     
